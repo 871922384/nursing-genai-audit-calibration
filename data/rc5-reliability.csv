@@ -1,0 +1,27 @@
+variable_id,domain,label,method,critical,n_total,n_complete_pairs,n_missing_pairs,n_both_na,n_applicability_disagreements,percent_agreement,cohen_kappa,gwet_ac1,weighted_kappa,icc_a1,prevalence_note,target_status,agreement_numerator,agreement_denominator,agreement_ci_low,agreement_ci_high,decision_coefficient,decision_coefficient_value,decision_coefficient_ci_low,decision_coefficient_ci_high,bootstrap_valid_replicates
+repeated_runs_per_input,稳定性,同输入重复运行,Cohen_kappa_and_AC1,Y,12,12,0,0,2,0.6667,0.4286,0.5903,NA,NA,,revise,8,12,0.3906,0.8619,gwet_ac1,0.5903,0.2057,0.8994,9999
+llm_as_judge_used,自动评价,使用LLM-as-judge,Cohen_kappa_and_AC1,Y,12,12,0,0,1,0.6667,-0.0667,0.6303,NA,NA,,revise,8,12,0.3906,0.8619,gwet_ac1,0.6303,0.2449,0.9094,9921
+system_prompt_reported,生成设置,系统提示词报告,Cohen_kappa_and_AC1,Y,12,12,0,3,5,0.3333,-0.2000,0.1859,NA,NA,,revise,3,9,0.1206,0.6458,gwet_ac1,0.1859,-0.7561,0.5385,10000
+reviewers_independent,人工评审,评价者独立评分,Cohen_kappa_and_AC1,Y,12,12,0,4,1,0.8750,0.4667,0.8590,NA,NA,,pass,7,8,0.5291,0.9776,gwet_ac1,0.8590,0.4866,0.8590,6553
+reviewers_blinded,人工评审,评价者盲法,Cohen_kappa_and_AC1,Y,12,12,0,4,4,0.5000,0.3846,0.3425,NA,NA,,revise,4,8,0.2152,0.7848,gwet_ac1,0.3425,-0.1313,0.8436,9994
+interrater_reliability_reported,人工评审,评审者一致性统计报告,Cohen_kappa_and_AC1,Y,12,12,0,4,2,0.6250,0.4146,0.5248,NA,NA,,revise,5,8,0.3057,0.8632,gwet_ac1,0.5248,0.0237,0.8590,9949
+error_definition_reported,错误评价,错误操作定义报告,Cohen_kappa_and_AC1,Y,12,12,0,1,0,0.7273,-0.1379,0.6432,NA,NA,,revise,8,11,0.4344,0.9025,gwet_ac1,0.6432,0.0959,0.9005,9690
+potential_harm_assessed,临床安全,潜在伤害评价,Cohen_kappa_and_AC1,Y,12,12,0,0,3,0.5000,0.1724,0.3958,NA,NA,,revise,6,12,0.2538,0.7462,gwet_ac1,0.3958,-0.0117,0.7182,10000
+fairness_subgroups_assessed,公平治理,亚组公平性评价,Cohen_kappa_and_AC1,Y,12,12,0,9,3,0.0000,0.0000,-0.4400,NA,NA,,revise,0,3,0.0000,0.5615,gwet_ac1,-0.4400,-1.0000,-0.4400,10000
+escalation_or_abstention_reported,人工监督,升级拒答或不确定性机制报告,Cohen_kappa_and_AC1,Y,12,12,0,8,3,0.2500,-0.0909,-0.1163,NA,NA,,revise,1,4,0.0456,0.6994,gwet_ac1,-0.1163,-1.0000,0.6863,9965
+instrument_available,开放科学,评价量表或编码表可获得,weighted_kappa_linear,Y,12,12,0,6,0,1.0000,NA,NA,NA,NA,skewed:1_partial_or_on_request=100.0%; interpret AC1 with kappa,manual_review_required,6,6,0.6097,1.0000,weighted_kappa,NA,NA,NA,0
+harm_severity_graded,临床安全,伤害严重度分级,Cohen_kappa_and_AC1,Y,12,12,0,9,2,0.3333,0.2500,-0.0000,NA,NA,,revise,1,3,0.0615,0.7923,gwet_ac1,-0.0000,-1.0000,0.5556,9616
+judge_independence_addressed,自动评价,裁判独立性处理,Cohen_kappa_and_AC1,Y,12,12,0,10,2,0.0000,-0.3333,-0.4545,NA,NA,,revise,0,2,0.0000,0.6576,gwet_ac1,-0.4545,-1.0000,-0.4545,10000
+judge_bias_control_reported,自动评价,裁判偏倚控制,Cohen_kappa_and_AC1,Y,12,12,0,10,2,0.0000,-0.3333,-0.4545,NA,NA,,revise,0,2,0.0000,0.6576,gwet_ac1,-0.4545,-1.0000,-0.4545,10000
+judge_human_validation,自动评价,自动裁判经人工验证,Cohen_kappa_and_AC1,Y,12,12,0,10,2,0.0000,-0.3333,-0.4545,NA,NA,,revise,0,2,0.0000,0.6576,gwet_ac1,-0.4545,-1.0000,-0.4545,10000
+citation_error_assessed,错误评价,引用或来源错误评价,Cohen_kappa_and_AC1,N,12,12,0,9,3,0.0000,-0.8000,-1.0000,NA,NA,,revise,0,3,0.0000,0.5615,gwet_ac1,-1.0000,-1.0000,-1.0000,10000
+reference_standard_method,参考标准,参考标准类型,Cohen_kappa_and_AC1,N,12,12,0,1,2,0.8182,0.6944,0.7736,NA,NA,,pass,9,11,0.5230,0.9486,gwet_ac1,0.7736,0.4118,1.0000,9987
+reference_standard_formation_reported,参考标准,金标准形成流程报告,Cohen_kappa_and_AC1,Y,12,12,0,1,2,0.8182,0.6452,0.7556,NA,NA,,revise,9,11,0.5230,0.9486,gwet_ac1,0.7556,0.3660,1.0000,9985
+hallucination_assessed,错误评价,幻觉评价,Cohen_kappa_and_AC1,Y,12,12,0,0,2,0.7500,0.0000,0.7182,NA,NA,,revise,9,12,0.4677,0.9111,gwet_ac1,0.7182,0.3739,0.9094,9688
+omission_assessed,错误评价,遗漏评价,Cohen_kappa_and_AC1,Y,12,12,0,4,6,0.1250,0.0000,-0.1468,NA,NA,,revise,1,8,0.0224,0.4709,gwet_ac1,-0.1468,-0.4971,0.1809,10000
+contradiction_assessed,错误评价,内部矛盾评价,Cohen_kappa_and_AC1,N,12,12,0,0,0,0.6667,0.0000,0.6105,NA,NA,,revise,8,12,0.3906,0.8619,gwet_ac1,0.6105,0.2000,0.9094,9917
+actionability_or_critical_error,临床安全,可行动性或关键错误单列,Cohen_kappa_and_AC1,Y,12,12,0,0,0,0.6667,0.2727,0.5826,NA,NA,,revise,8,12,0.3906,0.8619,gwet_ac1,0.5826,0.0059,0.9061,9985
+bias_assessed,公平治理,模型偏倚实证评价,Cohen_kappa_and_AC1,Y,12,12,0,0,0,0.9167,0.0000,0.9094,NA,NA,skewed:NR=95.8%; interpret AC1 with kappa,pass,11,12,0.6461,0.9851,gwet_ac1,0.9094,0.6800,0.9094,6421
+sensitive_upload_addressed,隐私治理,敏感数据上传处理报告,Cohen_kappa_and_AC1,Y,12,12,0,9,0,0.6667,0.4000,0.3333,NA,NA,,revise,2,3,0.2077,0.9385,gwet_ac1,0.3333,-1.0000,1.0000,9264
+prompts_available,开放科学,提示词材料可获得,weighted_kappa_linear,Y,12,12,0,0,0,0.8333,0.5862,0.7913,0.6129,NA,,revise,10,12,0.5520,0.9530,weighted_kappa,0.6129,-0.1250,1.0000,9916
+output_samples_available,开放科学,模型输出样本可获得,weighted_kappa_linear,N,12,12,0,0,0,0.9167,0.8000,0.8580,0.8000,NA,,pass,11,12,0.6461,0.9851,weighted_kappa,0.8000,0.2258,1.0000,9911

@@ -1,0 +1,99 @@
+{
+  "authors": [
+    "Lijun Liang",
+    "Xiaojuan Wang",
+    "Shi Shi",
+    "Shilu Zhao",
+    "Jinlong Xu"
+  ],
+  "doi": null,
+  "excluded_materials": [
+    "complete texts",
+    "normalized source texts",
+    "full-text excerpts and evidence-locator comments",
+    "free-text reviewer notes",
+    "restricted source materials"
+  ],
+  "files": [
+    {
+      "bytes": 34,
+      "path": ".gitignore",
+      "sha256": "def2c071c50d7b0ecedcf706c4e8c72904f3b08833eb3f9ceef277d0bf1e4d8a"
+    },
+    {
+      "bytes": 1372,
+      "path": "CITATION.cff",
+      "sha256": "509e29ea6fe0fffe4ae009aeaa32837bc5532162e94324548eb634cd0302600b"
+    },
+    {
+      "bytes": 973,
+      "path": "LICENSE-CODE.md",
+      "sha256": "fadd4a1a82e1320619a5176989636e816b9dc78d8f5d3f3fc161150c4127ee1f"
+    },
+    {
+      "bytes": 383,
+      "path": "LICENSE-DATA.md",
+      "sha256": "56971b9850f939baacd95c9cfc0f2628a360a062216755c09981e53b9873db1c"
+    },
+    {
+      "bytes": 2056,
+      "path": "README.md",
+      "sha256": "5de0940d5416d9a0a1b6d6a9094c78fcebcda807097ef277661fcdfbcdef1268"
+    },
+    {
+      "bytes": 569,
+      "path": "RELEASE-STATUS.md",
+      "sha256": "43f7d22d311c3f19262b1cd8dfabd240cd6a000ddd9912d4e74f652799508563"
+    },
+    {
+      "bytes": 5377,
+      "path": "data/adjudicated-disagreements.csv",
+      "sha256": "48a17659f64c61953672fe2eec920ca8766a5f882029b487268b8c55cf5802dd"
+    },
+    {
+      "bytes": 43291,
+      "path": "data/coding-dictionary.csv",
+      "sha256": "92b10d496c4ceb2fc9e0e117af5809fdb7ad26edf7532ae1136f493198d40f08"
+    },
+    {
+      "bytes": 14718,
+      "path": "data/paired-coding-values.csv",
+      "sha256": "1bcf3ed864b1fd0490ac1b9fa5e88f0af3980a5b50e30be98b7e2eb54ece605b"
+    },
+    {
+      "bytes": 5383,
+      "path": "data/rc5-reliability.csv",
+      "sha256": "fd1060e192e59216275490d1381957ed501f9c9b9f6516855be55293ac5281e0"
+    },
+    {
+      "bytes": 10397,
+      "path": "data/rc6-item-disposition.csv",
+      "sha256": "44cb1fff581595d94f71b7264df8e7dae833371766e53b72dd6c905e472e8e1c"
+    },
+    {
+      "bytes": 142,
+      "path": "data/rc6-tier-summary.csv",
+      "sha256": "08aba9cae65e034c821db7cdf170a919e9c9779f724fcc36f03198067f66fc41"
+    },
+    {
+      "bytes": 8300,
+      "path": "scripts/calibration_intervals.py",
+      "sha256": "2a7372d42a0d1ac426453ddab903892cab71afd33b38fc20fb58ce5c8308d54a"
+    },
+    {
+      "bytes": 10185,
+      "path": "scripts/reliability_metrics.py",
+      "sha256": "ad2960309b32a14d2593582bf95c1330c03302003e50bd199eab0626de2402c8"
+    }
+  ],
+  "license": {
+    "data_and_documentation": "CC BY 4.0",
+    "source_code": "MIT"
+  },
+  "package_id": "nursing-genai-audit-calibration",
+  "package_version": "0.1.0",
+  "public_url": "https://github.com/871922384/nursing-genai-audit-calibration",
+  "release_status": "public_versioned_release",
+  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.0",
+  "schema_version": 1
+}
