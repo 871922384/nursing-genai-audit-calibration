@@ -1,15 +1,16 @@
+
 cff-version: 1.2.0
 message: "Please cite the associated manuscript when using these materials."
 title: "Interrater calibration materials for nursing generative AI reporting audits"
 type: dataset
-version: 0.1.1
+version: 0.1.2
 repository-code: "https://github.com/871922384/nursing-genai-audit-calibration"
-url: "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.1"
+url: "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.2"
 identifiers:
   - type: doi
     value: 10.17605/OSF.IO/5KQD9
     description: "Retrospective OSF Open-Ended Registration"
-date-released: 2026-09-02
+date-released: 2026-09-03
 authors:
   - family-names: Yu
     given-names: Jin

@@ -1,14 +1,10 @@
 {
-  "schema_version": 1,
-  "package_id": "nursing-genai-audit-calibration",
-  "package_version": "0.1.1",
-  "release_status": "public_versioned_release",
   "authors": [
     "Jin Yu",
     "Feifei Xie",
     "Jinlong Xu"
   ],
-  "doi": "10.17605/OSF.IO/5KQD9",
+  "doi": null,
   "excluded_materials": [
     "complete texts",
     "normalized source texts",
@@ -16,82 +12,86 @@
     "free-text reviewer notes",
     "restricted source materials"
   ],
+  "files": [
+    {
+      "bytes": 34,
+      "path": ".gitignore",
+      "sha256": "def2c071c50d7b0ecedcf706c4e8c72904f3b08833eb3f9ceef277d0bf1e4d8a"
+    },
+    {
+      "bytes": 1298,
+      "path": "CITATION.cff",
+      "sha256": "a3465256d25a116eba457c0473210557b0146d758113e0af98c8b316b72bb7c9"
+    },
+    {
+      "bytes": 973,
+      "path": "LICENSE-CODE.md",
+      "sha256": "fadd4a1a82e1320619a5176989636e816b9dc78d8f5d3f3fc161150c4127ee1f"
+    },
+    {
+      "bytes": 383,
+      "path": "LICENSE-DATA.md",
+      "sha256": "56971b9850f939baacd95c9cfc0f2628a360a062216755c09981e53b9873db1c"
+    },
+    {
+      "bytes": 2770,
+      "path": "README.md",
+      "sha256": "6462b0dab5f141f727b0e2bd1f7497260b1cd4ec77913be8f9f9983224d5b76a"
+    },
+    {
+      "bytes": 858,
+      "path": "RELEASE-STATUS.md",
+      "sha256": "d6d888289ae67a52ad9c78c833ff16dccf076acebad77855f127e26610c52f0b"
+    },
+    {
+      "bytes": 5377,
+      "path": "data/adjudicated-disagreements.csv",
+      "sha256": "48a17659f64c61953672fe2eec920ca8766a5f882029b487268b8c55cf5802dd"
+    },
+    {
+      "bytes": 43291,
+      "path": "data/coding-dictionary.csv",
+      "sha256": "92b10d496c4ceb2fc9e0e117af5809fdb7ad26edf7532ae1136f493198d40f08"
+    },
+    {
+      "bytes": 14718,
+      "path": "data/paired-coding-values.csv",
+      "sha256": "1bcf3ed864b1fd0490ac1b9fa5e88f0af3980a5b50e30be98b7e2eb54ece605b"
+    },
+    {
+      "bytes": 5503,
+      "path": "data/rc5-reliability.csv",
+      "sha256": "5ab2cd938b9abb4b4e78192544ec4feb3246f0144fa4810224a823a76c8a5e7a"
+    },
+    {
+      "bytes": 10396,
+      "path": "data/rc6-item-disposition.csv",
+      "sha256": "364afde40c6121d94483c5b71b605654ae8c28997851077ef5783f983d6183cc"
+    },
+    {
+      "bytes": 143,
+      "path": "data/rc6-tier-summary.csv",
+      "sha256": "b731905b6b6bc1996f6a1c078258ad8d7ee6abf2bb45f36f6788c7889a0e5202"
+    },
+    {
+      "bytes": 8584,
+      "path": "scripts/calibration_intervals.py",
+      "sha256": "1deff49ed5f8211166ebe923c6721abc038b976fcbaa80e1ae497f4ef7448812"
+    },
+    {
+      "bytes": 10185,
+      "path": "scripts/reliability_metrics.py",
+      "sha256": "ad2960309b32a14d2593582bf95c1330c03302003e50bd199eab0626de2402c8"
+    }
+  ],
   "license": {
     "data_and_documentation": "CC BY 4.0",
     "source_code": "MIT"
   },
+  "package_id": "nursing-genai-audit-calibration",
+  "package_version": "0.1.2",
   "public_url": "https://github.com/871922384/nursing-genai-audit-calibration",
-  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.1",
-  "files": [
-    {
-      "path": ".gitignore",
-      "bytes": 34,
-      "sha256": "def2c071c50d7b0ecedcf706c4e8c72904f3b08833eb3f9ceef277d0bf1e4d8a"
-    },
-    {
-      "path": "CITATION.cff",
-      "bytes": 1297,
-      "sha256": "6566f8ebc7c7a42983f314ff4ed71969f5f2f136ede19cbedf2eb884baf14bfb"
-    },
-    {
-      "path": "LICENSE-CODE.md",
-      "bytes": 973,
-      "sha256": "fadd4a1a82e1320619a5176989636e816b9dc78d8f5d3f3fc161150c4127ee1f"
-    },
-    {
-      "path": "LICENSE-DATA.md",
-      "bytes": 383,
-      "sha256": "56971b9850f939baacd95c9cfc0f2628a360a062216755c09981e53b9873db1c"
-    },
-    {
-      "path": "README.md",
-      "bytes": 2548,
-      "sha256": "25d6f96c4c639cbf86322e67f1f0410006c24e2b10fce1f399a69c5b8d4048b1"
-    },
-    {
-      "path": "RELEASE-STATUS.md",
-      "bytes": 847,
-      "sha256": "a45cb4701cd840dc38ae5a3157b34e948946476eac4400b43c906600391919a9"
-    },
-    {
-      "path": "data/adjudicated-disagreements.csv",
-      "bytes": 5377,
-      "sha256": "48a17659f64c61953672fe2eec920ca8766a5f882029b487268b8c55cf5802dd"
-    },
-    {
-      "path": "data/coding-dictionary.csv",
-      "bytes": 43291,
-      "sha256": "92b10d496c4ceb2fc9e0e117af5809fdb7ad26edf7532ae1136f493198d40f08"
-    },
-    {
-      "path": "data/paired-coding-values.csv",
-      "bytes": 14718,
-      "sha256": "1bcf3ed864b1fd0490ac1b9fa5e88f0af3980a5b50e30be98b7e2eb54ece605b"
-    },
-    {
-      "path": "data/rc5-reliability.csv",
-      "bytes": 5383,
-      "sha256": "fd1060e192e59216275490d1381957ed501f9c9b9f6516855be55293ac5281e0"
-    },
-    {
-      "path": "data/rc6-item-disposition.csv",
-      "bytes": 10397,
-      "sha256": "44cb1fff581595d94f71b7264df8e7dae833371766e53b72dd6c905e472e8e1c"
-    },
-    {
-      "path": "data/rc6-tier-summary.csv",
-      "bytes": 142,
-      "sha256": "08aba9cae65e034c821db7cdf170a919e9c9779f724fcc36f03198067f66fc41"
-    },
-    {
-      "path": "scripts/calibration_intervals.py",
-      "bytes": 8300,
-      "sha256": "2a7372d42a0d1ac426453ddab903892cab71afd33b38fc20fb58ce5c8308d54a"
-    },
-    {
-      "path": "scripts/reliability_metrics.py",
-      "bytes": 10185,
-      "sha256": "ad2960309b32a14d2593582bf95c1330c03302003e50bd199eab0626de2402c8"
-    }
-  ]
+  "release_status": "public_versioned_release",
+  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.2",
+  "schema_version": 1
 }

@@ -1,3 +1,4 @@
+
 # Interrater calibration materials
 
 This repository supports the manuscript "Applicability, not judgement, drives disagreement when auditing safety reporting in nursing generative AI studies: a methodological calibration study."
@@ -35,4 +36,4 @@ The paired dataset excludes evidence locators, free-text reviewer notes, and ful
 
 ## Release status
 
-Version 0.1.1 is available at https://github.com/871922384/nursing-genai-audit-calibration. The versioned release is https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.1. Data files are unchanged from v0.1.0. Documentation in this release names the current manuscript title, the two independent human reviewers, and the retrospective OSF Open-Ended Registration DOI 10.17605/OSF.IO/5KQD9 (https://osf.io/5kqd9/; associated project https://osf.io/kes4f/; registered 2 September 2026). The OSF registration postdates data collection.
+Version 0.1.2 is available at https://github.com/871922384/nursing-genai-audit-calibration. The versioned release is https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.2. Paired coding values are unchanged from v0.1.0. This release aligns post-calibration analytic classifications with the manuscript primary rule after the jointly-applicable and bootstrap display filters: 2 of 26 items met the primary rule, with analytic-tier counts 44/2/10/12/2. Documentation names the current manuscript title, two independent human reviewers, and the retrospective OSF Open-Ended Registration DOI 10.17605/OSF.IO/5KQD9 (https://osf.io/5kqd9/; associated project https://osf.io/kes4f/; registered 2 September 2026). The OSF registration postdates data collection.

@@ -31,7 +31,7 @@ expert_number_reported,existing_handling,retain_existing_contract,paper,nominal,
 expert_qualification_reported,existing_handling,retain_existing_contract,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,,not_in_rc5_target_set
 reference_standard_formation_reported,exploratory_two_stage,applicability_then_exploratory_reporting,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,9,revise
 human_review_used,existing_handling,retain_existing_contract,paper,nominal,Y|N|NR,Y,Cohen_kappa_and_AC1,,not_in_rc5_target_set
-reviewers_independent,rc5_pass_quantitative,stable_quantitative_with_applicable_denominator,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,7,pass
+reviewers_independent,exploratory_two_stage,applicability_then_exploratory_reporting,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,7,revise
 reviewers_blinded,conditional_prevalence_limited,conditional_subset_or_prevalence_limited,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,4,revise
 reviewer_training_reported,existing_handling,retain_existing_contract,paper,nominal,Y|N|NR|NA,N,Cohen_kappa_and_AC1,,not_in_rc5_target_set
 conflict_resolution_reported,existing_handling,retain_existing_contract,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,,not_in_rc5_target_set
@@ -45,7 +45,7 @@ error_definition_reported,qualitative_only_unstable,qualitative_evidence_synthes
 potential_harm_assessed,qualitative_only_unstable,qualitative_evidence_synthesis_only,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,9,revise
 harm_severity_graded,conditional_prevalence_limited,conditional_subset_or_prevalence_limited,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,1,revise
 actionability_or_critical_error,exploratory_two_stage,applicability_then_exploratory_reporting,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,12,revise
-bias_assessed,rc5_pass_quantitative,stable_quantitative_with_applicable_denominator,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,12,pass
+bias_assessed,conditional_prevalence_limited,conditional_subset_or_prevalence_limited,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,12,revise
 fairness_subgroups_assessed,conditional_prevalence_limited,conditional_subset_or_prevalence_limited,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,0,revise
 fairness_dimensions_text,existing_handling,retain_existing_contract,paper,text,free_text,N,exact_match,,not_in_rc5_target_set
 deidentification_reported,existing_handling,retain_existing_contract,paper,nominal,Y|N|NR|NA,Y,Cohen_kappa_and_AC1,,not_in_rc5_target_set

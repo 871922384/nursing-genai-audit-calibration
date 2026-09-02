@@ -199,24 +199,32 @@ def build_interval_rows(
     return enriched
 
 
-def strict_dual_coefficient_pass_count(rows: list[dict[str, str]]) -> int:
-    count = 0
+def sensitivity_pass_counts(rows: list[dict[str, str]]) -> dict[str, int]:
+    counts = {"nominal": 0, "ordinal": 0, "total": 0}
     for row in rows:
         agreement_target = 0.85 if row["critical"] == "Y" else 0.80
         coefficient_target = 0.80 if row["critical"] == "Y" else 0.70
         agreement = float(row["percent_agreement"])
         if row["method"] == "Cohen_kappa_and_AC1":
+            family = "nominal"
             values = (row["cohen_kappa"], row["gwet_ac1"])
             passes = all(
                 value != "NA" and float(value) >= coefficient_target for value in values
             )
         elif row["method"] == "weighted_kappa_linear":
+            family = "ordinal"
             value = row["weighted_kappa"]
             passes = value != "NA" and float(value) >= coefficient_target
         else:
-            passes = False
-        count += agreement >= agreement_target and passes
-    return count
+            continue
+        if agreement >= agreement_target and passes:
+            counts[family] += 1
+            counts["total"] += 1
+    return counts
+
+
+def strict_dual_coefficient_pass_count(rows: list[dict[str, str]]) -> int:
+    return sensitivity_pass_counts(rows)["total"]
 
 
 if __name__ == "__main__":
