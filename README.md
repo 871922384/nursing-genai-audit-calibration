@@ -1,7 +1,8 @@
+# Interrater calibration materials
 
-# Cross-system calibration materials
+This repository supports the manuscript "Applicability, not judgement, drives disagreement when auditing safety reporting in nursing generative AI studies: a methodological calibration study."
 
-This repository supports the manuscript "Cross-system agreement in auditing safety and reproducibility reporting in nursing generative AI research: a multi-round methodological calibration study."
+Two independent human reviewers coded the reports. The public files label their paired outputs as coder A and coder B. Adjudicated values were confirmed by two reviewers.
 
 ## Contents
 
@@ -34,4 +35,4 @@ The paired dataset excludes evidence locators, free-text reviewer notes, and ful
 
 ## Release status
 
-Version 0.1.0 is available at https://github.com/871922384/nursing-genai-audit-calibration. The versioned release is https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.0. No archive DOI has been assigned.
+Version 0.1.1 is available at https://github.com/871922384/nursing-genai-audit-calibration. The versioned release is https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.1. Data files are unchanged from v0.1.0. Documentation in this release names the current manuscript title, the two independent human reviewers, and the retrospective OSF Open-Ended Registration DOI 10.17605/OSF.IO/5KQD9 (https://osf.io/5kqd9/; associated project https://osf.io/kes4f/; registered 2 September 2026). The OSF registration postdates data collection.
