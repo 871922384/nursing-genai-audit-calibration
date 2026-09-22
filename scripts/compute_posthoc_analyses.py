@@ -17,11 +17,75 @@ import math
 from collections import Counter, defaultdict
 from pathlib import Path
 import random
+import re
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PAIRED_CSV = REPO_ROOT / "data/paired-coding-values.csv"
 LOCATORS_CSV = REPO_ROOT / "data/disagreement-locators.csv"
 ITEM_MAP_CSV = REPO_ROOT / "data/item-id-map.csv"
+
+
+def normalize_section_name(s: str) -> str:
+    if not s:
+        return ""
+    s = s.replace("#", "").strip().lower()
+    s = re.sub(r"\(.*?\)", "", s).strip()
+    return s
+
+
+def extract_candidate_sections(loc: str) -> list[str]:
+    if not loc or "chunk" in loc.lower():
+        return []
+    clauses = loc.split(";")
+    secs = []
+    for cl in clauses:
+        parts = re.split(r"[|>]", cl)
+        if len(parts) >= 2:
+            sec = normalize_section_name(parts[1])
+            if sec and not re.match(r"^l\d+", sec):
+                secs.append(sec)
+        else:
+            c_parts = cl.split(",")
+            if len(c_parts) >= 2:
+                sec = normalize_section_name(c_parts[1])
+                if sec and not re.match(r"^l\d+", sec):
+                    secs.append(sec)
+            else:
+                sec = normalize_section_name(cl)
+                if sec and not re.match(r"^l\d+", sec):
+                    secs.append(sec)
+    return secs
+
+
+def sections_match(s_a: str, s_b: str) -> bool:
+    if s_a == s_b:
+        return True
+    if "limitations" in s_a and "limitations" in s_b:
+        return True
+    if "outcome measures" in s_a and "outcome measures" in s_b:
+        return True
+    if "chatbot platform" in s_a and "chatbot platform" in s_b:
+        return True
+    return False
+
+
+def classify_locator_pair(loc_a: str, loc_b: str) -> str:
+    """Deterministically categorize evidence locator discrepancies into three classes:
+    1. Full-text absence: one rater identified an explicit passage while the other found none across the text (chunk coverage)
+    2. Same section: both raters located candidate evidence within the same manuscript section
+    3. Different sections: raters located candidate evidence across different manuscript sections
+    """
+    if not loc_a or not loc_b or "chunk" in loc_a.lower() or "chunk" in loc_b.lower():
+        return "Full-text absence"
+
+    secs_a = extract_candidate_sections(loc_a)
+    secs_b = extract_candidate_sections(loc_b)
+
+    for sa in secs_a:
+        for sb in secs_b:
+            if sections_match(sa, sb):
+                return "Same section"
+    return "Different sections"
 
 
 def safe_ratio(num: float, den: float) -> float | None:
@@ -184,24 +248,30 @@ def main():
     print(f"Pooled Stage 1 (312 pairs): Raw Agree = {pooled_s1_raw*100:.1f}%, Cohen's kappa = {pooled_s1_k:.3f}, Gwet's AC1 = {pooled_s1_ac1:.3f}")
 
     # -------------------------------------------------------------
-    # A4: Classification of the 75 calibration disagreements
-    # -------------------------------------------------------------
-    # Load detailed reviewer csv files
-    # -------------------------------------------------------------
-    # A4: Locator-Based Discrepancy Classification (75 Disagreements)
+    # A4: Deterministic Classification of the 75 calibration disagreements
     # -------------------------------------------------------------
     loc_classes = Counter()
     ad_loc_classes = Counter()
     vd_loc_classes = Counter()
     with LOCATORS_CSV.open(encoding="utf-8-sig") as f:
-        for r in csv.DictReader(f):
-            pat = r["locator_pattern"]
-            is_ad = r["disagreement_type"] == "AD"
-            loc_classes[pat] += 1
-            if is_ad:
-                ad_loc_classes[pat] += 1
-            else:
-                vd_loc_classes[pat] += 1
+        loc_rows = list(csv.DictReader(f))
+
+    assert len(loc_rows) == 75, f"Expected 75 disagreement rows, got {len(loc_rows)}"
+
+    for r in loc_rows:
+        # Deterministically compute classification from raw locators
+        computed_pat = classify_locator_pair(r["coder_a_locator"], r["coder_b_locator"])
+        archived_pat = r["locator_pattern"]
+        assert computed_pat == archived_pat, (
+            f"Deterministic classification mismatch for {r['paper_id']} {r['variable_id']}: "
+            f"computed '{computed_pat}' vs archived '{archived_pat}'"
+        )
+        is_ad = r["disagreement_type"] == "AD"
+        loc_classes[computed_pat] += 1
+        if is_ad:
+            ad_loc_classes[computed_pat] += 1
+        else:
+            vd_loc_classes[computed_pat] += 1
 
     print("\n=== A4: LOCATOR MECHANISM CLASSIFICATION (75 Disagreements) ===")
     print(f"Total Disagreements: 75 (47 AD + 28 VD)")
