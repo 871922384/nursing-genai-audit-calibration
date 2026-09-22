@@ -1,0 +1,27 @@
+item_id,variable_id,label,domain,tier,tier_rationale,method
+A01,repeated_runs_per_input,Repeated runs per input,Repeatability,C,Ensures deterministic reproduction across stochastic runs,Cohen_kappa_and_AC1
+A02,system_prompt_reported,System prompt reported,Prompting,C,Mandatory architectural specification for reproducibility,Cohen_kappa_and_AC1
+A03,prompts_available,Prompts available,Prompting,C,Open science prerequisite for prompt audit and verification,Cohen_kappa_and_AC1
+A04,reviewers_independent,Independent reviewers,Human review,C,Prerequisite human assessment independence,Cohen_kappa_and_AC1
+A05,reviewers_blinded,Reviewer blinding,Human review,C,Controls rater bias in subjective qualitative review,Cohen_kappa_and_AC1
+A06,interrater_reliability_reported,Interrater reliability reporting,Human review,C,Quantitative verification of human evaluation consensus,Cohen_kappa_and_AC1
+A07,error_definition_reported,Error definition reported,Error & harm,C,Definitional clarity for nursing clinical safety evaluation,Cohen_kappa_and_AC1
+A08,potential_harm_assessed,Potential-harm assessment,Error & harm,C,Direct patient safety barrier against unsafe advice,Cohen_kappa_and_AC1
+A09,harm_severity_graded,Harm severity grading,Error & harm,C,Stratification of catastrophic vs minor clinical error,Cohen_kappa_and_AC1
+A10,hallucination_assessed,Hallucination assessed,Error & harm,C,Detection of fabricated medical facts and clinical hazards,Cohen_kappa_and_AC1
+A11,omission_assessed,Omission assessed,Error & harm,C,Identifies critical missing steps in nursing care,Cohen_kappa_and_AC1
+A12,contradiction_assessed,Contradiction assessed,Error & harm,NC,Secondary error taxonomy facet; descriptive reporting characteristic,Cohen_kappa_and_AC1
+A13,actionability_or_critical_error,Actionability / critical error,Error & harm,C,Clinical usability and hazard thresholding for patient care,Cohen_kappa_and_AC1
+A14,citation_error_assessed,Citation error assessed,Error & harm,NC,Citation verification subset; secondary error taxonomy facet,Cohen_kappa_and_AC1
+A15,bias_assessed,Empirical bias assessment,Fairness & privacy,C,Verification of demographic and clinical fairness,Cohen_kappa_and_AC1
+A16,fairness_subgroups_assessed,Fairness subgroups assessed,Fairness & privacy,C,Subgroup stratification for health equity,Cohen_kappa_and_AC1
+A17,sensitive_upload_addressed,Sensitive upload addressed,Fairness & privacy,C,Patient confidentiality and HIPAA/data privacy compliance,Cohen_kappa_and_AC1
+A18,llm_as_judge_used,Automated evaluator used,Automated eval,C,Critical verification of automated evaluation methodology,Cohen_kappa_and_AC1
+A19,judge_independence_addressed,Evaluator independence addressed,Automated eval,C,Prevention of model self-preference bias in scoring,Cohen_kappa_and_AC1
+A20,judge_bias_control_reported,Evaluator bias control reported,Automated eval,C,Algorithmic bias controls in automated assessment,Cohen_kappa_and_AC1
+A21,judge_human_validation,Evaluator human validation,Automated eval,C,Human benchmark calibration for automated evaluators,Cohen_kappa_and_AC1
+A22,reference_standard_method,Reference-standard method,Reference standard,NC,Methodological description of benchmark construction rather than patient safety barrier,Cohen_kappa_and_AC1
+A23,reference_standard_formation_reported,Reference-standard formation,Reference standard,C,Validity and consensus formation of clinical ground truth,Cohen_kappa_and_AC1
+A24,instrument_available,Instrument available,Open materials,C,Open science reproducibility of evaluation instrument,Cohen_kappa_and_AC1
+A25,output_samples_available,Output-sample availability,Open materials,NC,Open-science artifact sharing rather than direct clinical risk attribute,Linear_weighted_kappa
+A26,escalation_or_abstention_reported,Escalation / abstention reporting,Human oversight,C,Human-in-the-loop safety protocol for clinical uncertainty,Cohen_kappa_and_AC1

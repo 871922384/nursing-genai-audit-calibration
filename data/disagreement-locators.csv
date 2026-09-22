@@ -1,0 +1,76 @@
+paper_id,variable_id,coder_a_value,coder_b_value,disagreement_type,locator_pattern,coder_a_locator,coder_b_locator
+C01,repeated_runs_per_input,N,NR,VD,Full-text absence,"pmid-38355517.md, Evaluation, L92",pmid-38355517.md > complete-text chunk coverage > L1-L112
+C01,system_prompt_reported,NR,NA,AD,Same section,"pmid-38355517.md, Model setting, L84",pmid-38355517.md > Model setting > L32
+C02,bias_assessed,Y,NR,VD,Different sections,pmid-39842028.md | Introduction | L19,pmid-39842028.md > Data Analyses > L36
+C02,error_definition_reported,NR,Y,VD,Same section,pmid-39842028.md | Data Analyses | L44,pmid-39842028.md > Data Analyses > L36
+C02,hallucination_assessed,NR,N,VD,Same section,pmid-39842028.md | Data Analyses | L44,pmid-39842028.md > Data Analyses > L36 (Kruskal-Wallis / Dann-Bonferroni on % correct)
+C02,omission_assessed,NA,N,AD,Different sections,pmid-39842028.md | Input Data | L32-35,pmid-39842028.md > Data Analyses > L36
+C02,potential_harm_assessed,N,NA,AD,Full-text absence,pmid-39842028.md | Data Analyses | L44-45,pmid-39842028.md > complete-text chunk coverage > L1-L48
+C02,system_prompt_reported,NR,NA,AD,Same section,pmid-39842028.md | Prompt Engineering | L40,pmid-39842028.md > Prompt Engineering > L32
+C03,actionability_or_critical_error,N,NR,VD,Full-text absence,pmid-40999587.md | Setting | L60,pmid-40999587.md > complete-text chunk coverage > L1-L150
+C03,contradiction_assessed,N,NR,VD,Full-text absence,pmid-40999587.md | Setting | L60,pmid-40999587.md > complete-text chunk coverage > L1-L150
+C03,hallucination_assessed,NR,NA,AD,Full-text absence,pmid-40999587.md | Setting | L60,pmid-40999587.md > complete-text chunk coverage > L1-L150
+C03,llm_as_judge_used,N,NR,VD,Different sections,pmid-40999587.md | Setting | L60,pmid-40999587.md > Measurement > L48
+C03,omission_assessed,N,NA,AD,Full-text absence,pmid-40999587.md | Setting | L60,pmid-40999587.md > complete-text chunk coverage > L1-L150
+C03,potential_harm_assessed,N,NA,AD,Full-text absence,"pmid-40999587.md | Results/Interpretation | L18, L133",pmid-40999587.md > complete-text chunk coverage > L1-L150
+C03,system_prompt_reported,NA,NR,AD,Same section,pmid-40999587.md | Setting | L58-59,pmid-40999587.md > Setting > L34
+C04,error_definition_reported,Y,NR,VD,Full-text absence,pmid-41039969.md | Outcome Measure | L98,pmid-41039969.md > complete-text chunk coverage > L1-L90
+C04,escalation_or_abstention_reported,NA,NR,AD,Full-text absence,pmid-41039969.md | Study Design | L55,pmid-41039969.md > complete-text chunk coverage > L1-L90
+C04,fairness_subgroups_assessed,NA,NR,AD,Full-text absence,pmid-41039969.md | Study Design | L58,pmid-41039969.md > complete-text chunk coverage > L1-L90
+C04,interrater_reliability_reported,NA,NR,AD,Full-text absence,pmid-41039969.md | Outcome Measure | L94,pmid-41039969.md > complete-text chunk coverage > L1-L90
+C04,llm_as_judge_used,N,NR,VD,Full-text absence,pmid-41039969.md | Outcome Measure | L94,pmid-41039969.md > complete-text chunk coverage > L1-L90
+C04,omission_assessed,NA,NR,AD,Different sections,pmid-41039969.md | Study Process | L82,pmid-41039969.md > Outcome Measure > L36
+C04,potential_harm_assessed,N,NR,VD,Full-text absence,pmid-41039969.md | Outcome Measure | L94,pmid-41039969.md > complete-text chunk coverage > L1-L90
+C04,reviewers_blinded,NA,NR,AD,Full-text absence,pmid-41039969.md | Outcome Measure | L94,pmid-41039969.md > complete-text chunk coverage > L1-L90
+C04,reviewers_independent,NA,NR,AD,Full-text absence,pmid-41039969.md | Outcome Measure | L94,pmid-41039969.md > complete-text chunk coverage > L1-L90
+C05,actionability_or_critical_error,N,NR,VD,Different sections,pmid-41184207.md | Study Design | L54,pmid-41184207.md > Accuracy > L60; Principal Findings > L100
+C05,citation_error_assessed,NR,NA,AD,Full-text absence,pmid-41184207.md | Study Design | L49,pmid-41184207.md > complete-text chunk coverage > L1-L112
+C05,contradiction_assessed,N,NR,VD,Different sections,pmid-41184207.md | Study Design | L54,"pmid-41184207.md > Accuracy and Repeatability > L40; Limitations > L106, L108"
+C05,judge_bias_control_reported,N,NA,AD,Full-text absence,pmid-41184207.md | Confidence and Robustness | L88,pmid-41184207.md > complete-text chunk coverage > L1-L112
+C05,judge_human_validation,Y,NA,AD,Full-text absence,pmid-41184207.md | Confidence | L155,pmid-41184207.md > complete-text chunk coverage > L1-L112
+C05,judge_independence_addressed,N,NA,AD,Full-text absence,pmid-41184207.md | Confidence and Robustness | L88,pmid-41184207.md > complete-text chunk coverage > L1-L112
+C05,llm_as_judge_used,Y,N,VD,Same section,pmid-41184207.md | Confidence and Robustness | L88,pmid-41184207.md > Confidence and Robustness > L44-L44
+C06,fairness_subgroups_assessed,NA,N,AD,Same section,pmid-41719523.md > Data Analysis > L75,pmid-41719523.md > Data Analysis > L46
+C06,interrater_reliability_reported,NR,N,VD,Same section,pmid-41719523.md > Data Collection Procedures > L70,pmid-41719523.md > Data Collection Procedures > L42
+C06,omission_assessed,NA,NR,AD,Same section,pmid-41719523.md > Data Collection Procedures > L67-69,pmid-41719523.md > Data Collection Procedures > L42
+C07,citation_error_assessed,NR,NA,AD,Full-text absence,pmid-39094112.md | Discharge Instructions Development | L58,pmid-39094112.md > complete-text chunk coverage > L1-L116
+C07,hallucination_assessed,NR,NA,AD,Full-text absence,pmid-39094112.md | Survey Administration | L107,pmid-39094112.md > complete-text chunk coverage > L1-L116
+C07,interrater_reliability_reported,NR,NA,AD,Different sections,pmid-39094112.md | Data Analysis | L116,pmid-39094112.md > Survey Administration > L48; Comparative Analysis > L84
+C07,llm_as_judge_used,N,NA,AD,Different sections,pmid-39094112.md | Data Analysis | L116,pmid-39094112.md > Survey Administration > L48; Comparative Analysis > L84
+C07,potential_harm_assessed,N,NA,AD,Same section,pmid-39094112.md | Survey Administration | L107,pmid-39094112.md > Survey Administration > L48; Comparative Analysis > L84
+C08,actionability_or_critical_error,N,NR,VD,Different sections,pmid-40663377.md | Subgroup Analysis | L444-L470,pmid-40663377.md > Limitations and Future Directions > L188-L200
+C08,contradiction_assessed,N,NR,VD,Different sections,pmid-40663377.md | Participant Recruitment and Data Collection | L306-L314,pmid-40663377.md > Discussion > L160
+C08,escalation_or_abstention_reported,NR,NA,AD,Same section,pmid-40663377.md | Limitations and Future Directions | L655-L675,"pmid-40663377.md > Limitations > L200, L204"
+C08,fairness_subgroups_assessed,NA,N,AD,Same section,pmid-40663377.md | Internal Validation | L138-L152; Subgroup Analysis | L444-L470,pmid-40663377.md > Internal Validation > L50; Limitations > L198
+C08,omission_assessed,N,NR,VD,Different sections,pmid-40663377.md | Participant Recruitment and Data Collection | L312-L314; Subgroup Analysis | L458-L470,pmid-40663377.md > Methods > L102; Internal Validation > L48
+C08,output_samples_available,0_unavailable,1_selected_examples,VD,Different sections,pmid-40663377.md | Subgroup Analysis | L444-L470; Limitations and Future Directions | L688-L692,pmid-40663377.md > External Validation > L56; pmid-40663377.md > Results > L152
+C08,prompts_available,0_unavailable,1_partial_or_on_request,VD,Different sections,pmid-40663377.md | RAG Process | L250-L268,pmid-40663377.md > Qualitative Study > L62; pmid-40663377.md > Knowledge Base Development > L74; pmid-40663377.md > Methods > L84
+C08,repeated_runs_per_input,N,NR,VD,Same section,pmid-40663377.md | Internal Validation | L132-L150,pmid-40663377.md > Internal Validation > L48-L50
+C08,sensitive_upload_addressed,NR,Y,VD,Different sections,pmid-40663377.md | RAG Process | L250-L268; Ethical Considerations | L370-L384,pmid-40663377.md > Methods > L86; pmid-40663377.md > Methods > L118
+C08,system_prompt_reported,NA,NR,AD,Different sections,pmid-40663377.md | RAG Process | L255-L268,pmid-40663377.md > Overview > L44; Methods > L86
+C09,contradiction_assessed,Y,NR,VD,Different sections,pmid-41859530.md > Accuracy > L73,pmid-41859530.md > Accuracy Analysis > L118
+C09,harm_severity_graded,NA,NR,AD,Same section,pmid-41859530.md > Accuracy > L73,pmid-41859530.md > Accuracy > L82-L82; Accuracy Analysis > L118
+C09,potential_harm_assessed,N,Y,VD,Same section,pmid-41859530.md > Accuracy > L73,pmid-41859530.md > Accuracy > L82
+C10,escalation_or_abstention_reported,NR,NA,AD,Different sections,pmid-41860987.md | ## Chatbot Platform and Study Procedures | L52,pmid-41860987.md > Discussion > L62-L62
+C10,omission_assessed,NA,NR,AD,Same section,pmid-41860987.md | ## Outcome Measures and Statistical Analysis | L64,pmid-41860987.md > Outcome Measures and Statistical Analysis > L30-L30
+C10,repeated_runs_per_input,NA,N,AD,Different sections,pmid-41860987.md | ## Chatbot Platform and Study Procedures | L44-L48,pmid-41860987.md > Outcome Measures and Statistical Analysis > L30-L30
+C10,reviewers_blinded,NA,N,AD,Same section,pmid-41860987.md | ## Chatbot Platform and Study Procedures | L44,pmid-41860987.md > Chatbot Platform and Study Procedures > L18-L18
+C10,system_prompt_reported,N,Y,VD,Same section,pmid-41860987.md | ## Chatbot Platform and Study Procedures | L48,pmid-41860987.md > Chatbot Platform and Study Procedures > L18-L18
+C11,actionability_or_critical_error,N,NR,VD,Full-text absence,pmid-42041943.md > 2.4. Participants and Survey Structure > L100-L104,pmid-42041943.md > complete-text chunk coverage > L1-L94
+C11,citation_error_assessed,NA,NR,AD,Full-text absence,pmid-42041943.md > 2.3. ChatGPT Response Generation > L76-L90,pmid-42041943.md > complete-text chunk coverage > L1-L94
+C11,harm_severity_graded,NA,NR,AD,Full-text absence,pmid-42041943.md > 2.4. Participants and Survey Structure > L100-L104,pmid-42041943.md > complete-text chunk coverage > L1-L94
+C11,judge_bias_control_reported,NA,NR,AD,Full-text absence,pmid-42041943.md > 2.4. Participants and Survey Structure > L96-L100,pmid-42041943.md > complete-text chunk coverage > L1-L94
+C11,judge_human_validation,NA,NR,AD,Full-text absence,pmid-42041943.md > 2.4. Participants and Survey Structure > L96-L100,pmid-42041943.md > complete-text chunk coverage > L1-L94
+C11,judge_independence_addressed,NA,NR,AD,Full-text absence,pmid-42041943.md > 2.4. Participants and Survey Structure > L96-L100,pmid-42041943.md > complete-text chunk coverage > L1-L94
+C11,omission_assessed,NA,NR,AD,Full-text absence,pmid-42041943.md > 2.4. Participants and Survey Structure > L100-L104,pmid-42041943.md > complete-text chunk coverage > L1-L94
+C11,potential_harm_assessed,N,NR,VD,Full-text absence,pmid-42041943.md > 2.4. Participants and Survey Structure > L100-L104,pmid-42041943.md > complete-text chunk coverage > L1-L94
+C11,reference_standard_formation_reported,NR,NA,AD,Full-text absence,pmid-42041943.md > 2.4. Participants and Survey Structure > L104-L106,pmid-42041943.md > complete-text chunk coverage > L1-L94
+C11,reference_standard_method,expert_consensus,NA,AD,Full-text absence,pmid-42041943.md > 2.4. Participants and Survey Structure > L94-L104,pmid-42041943.md > complete-text chunk coverage > L1-L94
+C11,reviewers_blinded,NA,N,AD,Different sections,pmid-42041943.md > 2.4. Participants and Survey Structure > L94-L100,pmid-42041943.md > section > L48
+C12,error_definition_reported,NR,Y,VD,Different sections,pmid-42228937.md > Feasibility Outcomes > L181-L200,pmid-42228937.md > Data Collection > L72; Reliability of OPBot > L98
+C12,prompts_available,1_partial_or_on_request,0_unavailable,VD,Same section,pmid-42228937.md > Education Chatbot: OPBot > L145-L150,pmid-42228937.md > Education Chatbot: OPBot > L52
+C12,reference_standard_formation_reported,NA,NR,AD,Different sections,pmid-42228937.md > Feasibility Outcomes > L188-L200,pmid-42228937.md > Education Chatbot: OPBot > L52
+C12,reference_standard_method,NA,human_output,AD,Different sections,pmid-42228937.md > Feasibility Outcomes > L188-L200,pmid-42228937.md > Education Chatbot: OPBot > L52
+C12,repeated_runs_per_input,NA,NR,AD,Full-text absence,pmid-42228937.md > Feasibility Outcomes > L188-L195,pmid-42228937.md > complete-text chunk coverage > L1-L140
+C12,reviewers_blinded,NA,NR,AD,Different sections,pmid-42228937.md > Feasibility Outcomes > L188-L200,"pmid-42228937.md > Randomization, Concealment, and Blinding > L46"
+C12,system_prompt_reported,NA,NR,AD,Full-text absence,pmid-42228937.md > Education Chatbot: OPBot > L120-L150,pmid-42228937.md > complete-text chunk coverage > L1-L140
