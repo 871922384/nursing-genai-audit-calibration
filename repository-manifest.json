@@ -1,7 +1,9 @@
 {
   "authors": [
-    "Jin Yu",
-    "Feifei Xie",
+    "Lijun Liang",
+    "Xiaojuan Wang",
+    "Shi Shi",
+    "Shilu Zhao",
     "Jinlong Xu"
   ],
   "doi": null,
@@ -19,9 +21,9 @@
       "sha256": "def2c071c50d7b0ecedcf706c4e8c72904f3b08833eb3f9ceef277d0bf1e4d8a"
     },
     {
-      "bytes": 1298,
+      "bytes": 884,
       "path": "CITATION.cff",
-      "sha256": "a3465256d25a116eba457c0473210557b0146d758113e0af98c8b316b72bb7c9"
+      "sha256": "eff4ffb62ca356109e9a0395d5f58051501c273c12440d1dd815efc100d0dce3"
     },
     {
       "bytes": 973,
@@ -34,14 +36,14 @@
       "sha256": "56971b9850f939baacd95c9cfc0f2628a360a062216755c09981e53b9873db1c"
     },
     {
-      "bytes": 2770,
+      "bytes": 2930,
       "path": "README.md",
-      "sha256": "6462b0dab5f141f727b0e2bd1f7497260b1cd4ec77913be8f9f9983224d5b76a"
+      "sha256": "f79ceb0251d0b0b2a1ea4d1686b1d42394e1c2a63144b0d087a5dd6a663f822b"
     },
     {
-      "bytes": 858,
+      "bytes": 1136,
       "path": "RELEASE-STATUS.md",
-      "sha256": "d6d888289ae67a52ad9c78c833ff16dccf076acebad77855f127e26610c52f0b"
+      "sha256": "8887d296dbdd88e1b2ba32e2358a35263564ea5f566937d4354a1d33218ae626"
     },
     {
       "bytes": 5377,
@@ -54,9 +56,24 @@
       "sha256": "92b10d496c4ceb2fc9e0e117af5809fdb7ad26edf7532ae1136f493198d40f08"
     },
     {
+      "bytes": 12504,
+      "path": "data/disagreement-locators.csv",
+      "sha256": "6da98b5fb651f03a7407cee58bd899e79b247809cf28de3a0e5c4e647328a4ed"
+    },
+    {
+      "bytes": 3941,
+      "path": "data/item-id-map.csv",
+      "sha256": "4bd56c53ceea82d4acd96ae779602073e5afd800d1445066ae537c83f3fccba7"
+    },
+    {
       "bytes": 14718,
       "path": "data/paired-coding-values.csv",
       "sha256": "1bcf3ed864b1fd0490ac1b9fa5e88f0af3980a5b50e30be98b7e2eb54ece605b"
+    },
+    {
+      "bytes": 7365,
+      "path": "data/pilot-screening-exclusions.csv",
+      "sha256": "c95d14e3b96eea59d4b061828ecf1593305a67374b6011b8aa3b6ae11e76bc94"
     },
     {
       "bytes": 5503,
@@ -79,6 +96,11 @@
       "sha256": "1deff49ed5f8211166ebe923c6721abc038b976fcbaa80e1ae497f4ef7448812"
     },
     {
+      "bytes": 13859,
+      "path": "scripts/compute_posthoc_analyses.py",
+      "sha256": "95c7ed2d9d4db4b2c2bb168165697d19969559f701f14a89d4dbaab51beb3f18"
+    },
+    {
       "bytes": 10185,
       "path": "scripts/reliability_metrics.py",
       "sha256": "ad2960309b32a14d2593582bf95c1330c03302003e50bd199eab0626de2402c8"
@@ -89,9 +111,10 @@
     "source_code": "MIT"
   },
   "package_id": "nursing-genai-audit-calibration",
-  "package_version": "0.1.2",
+  "package_version": "1.0.0",
   "public_url": "https://github.com/871922384/nursing-genai-audit-calibration",
-  "release_status": "public_versioned_release",
-  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.2",
-  "schema_version": 1
+  "release_status": "public_immutable_versioned_release",
+  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.0",
+  "schema_version": 1,
+  "osf_registration_doi": "10.17605/OSF.IO/5KQD9"
 }

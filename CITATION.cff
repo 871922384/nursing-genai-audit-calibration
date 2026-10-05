@@ -1,24 +1,24 @@
-
 cff-version: 1.2.0
 message: "Please cite the associated manuscript when using these materials."
-title: "Interrater calibration materials for nursing generative AI reporting audits"
+title: "Why Reviewers Disagree When Auditing Reporting in Nursing Generative AI Studies: An Applicability-First Interrater Agreement Study"
 type: dataset
-version: 0.1.2
+version: 1.0.0
+date-released: 2026-10-05
 repository-code: "https://github.com/871922384/nursing-genai-audit-calibration"
-url: "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v0.1.2"
+url: "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.0"
 identifiers:
   - type: doi
     value: 10.17605/OSF.IO/5KQD9
-    description: "Retrospective OSF Open-Ended Registration"
-date-released: 2026-09-03
+    description: "Retrospective OSF Open-Ended Registration; not a DOI for this GitHub release"
 authors:
-  - family-names: Yu
-    given-names: Jin
-    affiliation: "Department of Critical Care Medicine, Mianyang Hospital Affiliated to University of Electronic Science and Technology of China (Mianyang Central Hospital), Mianyang, Sichuan, China"
-  - family-names: Xie
-    given-names: Feifei
-    affiliation: "Department of Critical Care Medicine, Mianyang Hospital Affiliated to University of Electronic Science and Technology of China (Mianyang Central Hospital), Mianyang, Sichuan, China"
+  - family-names: Liang
+    given-names: Lijun
+  - family-names: Wang
+    given-names: Xiaojuan
+  - family-names: Shi
+    given-names: Shi
+  - family-names: Zhao
+    given-names: Shilu
   - family-names: Xu
     given-names: Jinlong
-    affiliation: "Department of Critical Care Medicine, Mianyang Hospital Affiliated to University of Electronic Science and Technology of China (Mianyang Central Hospital), Mianyang, Sichuan, China"
     email: rexxurt@gmail.com
