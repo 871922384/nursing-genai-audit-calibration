@@ -16,7 +16,7 @@ A14,citation_error_assessed,Citation error assessed,Error & harm,NC,Citation ver
 A15,bias_assessed,Empirical bias assessment,Fairness & privacy,C,Verification of demographic and clinical fairness,Cohen_kappa_and_AC1
 A16,fairness_subgroups_assessed,Fairness subgroups assessed,Fairness & privacy,C,Subgroup stratification for health equity,Cohen_kappa_and_AC1
 A17,sensitive_upload_addressed,Sensitive upload addressed,Fairness & privacy,C,Patient confidentiality and HIPAA/data privacy compliance,Cohen_kappa_and_AC1
-A18,llm_as_judge_used,Automated evaluator used,Automated eval,C,Critical verification of automated evaluation methodology,Cohen_kappa_and_AC1
+A18,llm_as_judge_used,LLM-as-judge used,LLM-as-judge,C,Critical verification of automated evaluation methodology,Cohen_kappa_and_AC1
 A19,judge_independence_addressed,Evaluator independence addressed,Automated eval,C,Prevention of model self-preference bias in scoring,Cohen_kappa_and_AC1
 A20,judge_bias_control_reported,Evaluator bias control reported,Automated eval,C,Algorithmic bias controls in automated assessment,Cohen_kappa_and_AC1
 A21,judge_human_validation,Evaluator human validation,Automated eval,C,Human benchmark calibration for automated evaluators,Cohen_kappa_and_AC1

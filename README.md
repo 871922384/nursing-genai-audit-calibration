@@ -11,7 +11,7 @@ Two independent human reviewers coded the reports. The public files label their 
 - `data/item-id-map.csv`: canonical item mapping (A01–A26) for the 26 calibration variables.
 - `data/paired-coding-values.csv`: 312 paired values from the independent 12-paper by 26-item calibration sample, labeled only as coder A and coder B.
 - `data/adjudicated-disagreements.csv`: final values for the 75 disagreements, with confirmation by two reviewers.
-- `data/disagreement-locators.csv`: evidence locator discrepancy classifications across all 75 disagreements.
+- `data/disagreement-locators.csv`: sanitized coder A and coder B evidence-locator strings and discrepancy classifications for all 75 disagreements.
 - `data/rc5-reliability.csv`: item-level agreement, coefficients, Wilson intervals, and bootstrap intervals.
 - `data/rc6-item-disposition.csv`: item-level post-calibration analytic classifications.
 - `data/rc6-tier-summary.csv`: counts across the five analytic classifications.
@@ -31,7 +31,7 @@ Python 3.10 or later is recommended; no third-party Python packages are required
 
 ## Release boundary
 
-The paired dataset excludes full-text excerpts, complete copyrighted texts, and restricted source documents. The public locator file contains classifications of discrepancies, not the original reviewer evidence locators. Paper identifiers are retained because the unit of analysis is the published report and source identity is required for auditability. All released coding values underwent final review by two researchers.
+The release includes sanitized reviewer evidence-locator strings and discrepancy classifications. Full-text excerpts, free-text coding notes, complete copyrighted texts, and restricted source documents are not distributed. Paper identifiers are retained because the unit of analysis is the published report and source identity is required for auditability. All released coding values underwent final review by two researchers.
 
 ## License
 
@@ -40,4 +40,4 @@ The paired dataset excludes full-text excerpts, complete copyrighted texts, and 
 
 ## Release status
 
-Submission-linked release v1.0.0 is available at https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.0. This release includes the canonical item identifier map (A01–A26), evidence locator discrepancy classifications, and post hoc computation scripts. Documentation names the current manuscript title, two independent human reviewers, and the retrospective OSF Open-Ended Registration DOI 10.17605/OSF.IO/5KQD9 (https://osf.io/5kqd9/; associated project https://osf.io/kes4f/; registered 2 September 2026). The OSF registration postdates data collection.
+Submission-linked release v1.0.1 is available at https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.1. This documentation-correction release includes the canonical item identifier map (A01–A26), sanitized reviewer locator strings, discrepancy classifications, and post hoc computation scripts. The independent calibration data and analytic results are unchanged from v1.0.0. Documentation names the current manuscript title, two independent human reviewers, and the retrospective OSF Open-Ended Registration DOI 10.17605/OSF.IO/5KQD9 (https://osf.io/5kqd9/; associated project https://osf.io/kes4f/; registered 2 September 2026). The OSF registration postdates data collection. Development-round counts in the manuscript are descriptive formative records; development-phase paired records are not included in this repository.

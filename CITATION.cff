@@ -2,10 +2,10 @@ cff-version: 1.2.0
 message: "Please cite the associated manuscript when using these materials."
 title: "Why Reviewers Disagree When Auditing Reporting in Nursing Generative AI Studies: An Applicability-First Interrater Agreement Study"
 type: dataset
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-10-05
 repository-code: "https://github.com/871922384/nursing-genai-audit-calibration"
-url: "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.0"
+url: "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.1"
 identifiers:
   - type: doi
     value: 10.17605/OSF.IO/5KQD9

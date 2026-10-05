@@ -10,7 +10,7 @@
   "excluded_materials": [
     "complete texts",
     "normalized source texts",
-    "full-text excerpts and evidence-locator comments",
+    "full-text excerpts and unsanitized evidence-locator comments",
     "free-text reviewer notes",
     "restricted source materials"
   ],
@@ -23,7 +23,7 @@
     {
       "bytes": 884,
       "path": "CITATION.cff",
-      "sha256": "eff4ffb62ca356109e9a0395d5f58051501c273c12440d1dd815efc100d0dce3"
+      "sha256": "06273a57fa508bdf582888a6d5297a3506be77e7d5feeee7f078b75dd912a877"
     },
     {
       "bytes": 973,
@@ -36,14 +36,14 @@
       "sha256": "56971b9850f939baacd95c9cfc0f2628a360a062216755c09981e53b9873db1c"
     },
     {
-      "bytes": 2930,
+      "bytes": 3244,
       "path": "README.md",
-      "sha256": "f79ceb0251d0b0b2a1ea4d1686b1d42394e1c2a63144b0d087a5dd6a663f822b"
+      "sha256": "22244a45d41ba9925a7f5ca3f40155f2f46b5fc9ac1c05caed1f6662f672dc51"
     },
     {
-      "bytes": 1136,
+      "bytes": 1345,
       "path": "RELEASE-STATUS.md",
-      "sha256": "8887d296dbdd88e1b2ba32e2358a35263564ea5f566937d4354a1d33218ae626"
+      "sha256": "3f0bd711e9369af9c8ebab7d1173b1e3fcc96762ea8c6efc2fbbe08cbcf1d6ca"
     },
     {
       "bytes": 5377,
@@ -61,9 +61,9 @@
       "sha256": "6da98b5fb651f03a7407cee58bd899e79b247809cf28de3a0e5c4e647328a4ed"
     },
     {
-      "bytes": 3941,
+      "bytes": 3932,
       "path": "data/item-id-map.csv",
-      "sha256": "4bd56c53ceea82d4acd96ae779602073e5afd800d1445066ae537c83f3fccba7"
+      "sha256": "2afb8098094d605bed09648bc41ed1644d268b096b4db1b2027b9fd04009ab67"
     },
     {
       "bytes": 14718,
@@ -111,10 +111,10 @@
     "source_code": "MIT"
   },
   "package_id": "nursing-genai-audit-calibration",
-  "package_version": "1.0.0",
+  "package_version": "1.0.1",
   "public_url": "https://github.com/871922384/nursing-genai-audit-calibration",
   "release_status": "public_immutable_versioned_release",
-  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.0",
+  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.1",
   "schema_version": 1,
   "osf_registration_doi": "10.17605/OSF.IO/5KQD9"
 }
