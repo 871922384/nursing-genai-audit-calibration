@@ -125,8 +125,11 @@ def fmt(value: float | None) -> str:
 
 
 def target_status(
-    *, critical: bool, agreement: float | None, kappa: float | None, ac1: float | None
+    *, critical: bool, agreement: float | None, kappa: float | None,
+    ac1: float | None, jointly_applicable: int
 ) -> str:
+    if jointly_applicable == 0:
+        return "insufficient_applicable_sample"
     agreement_target = 0.85 if critical else 0.80
     coefficient_target = 0.80 if critical else 0.70
     if agreement is None:
@@ -139,16 +142,43 @@ def target_status(
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--reviewer-a", required=True, type=Path)
-    parser.add_argument("--reviewer-b", required=True, type=Path)
+    parser.add_argument("--paired", type=Path, help="public combined paired-coding CSV")
+    parser.add_argument("--reviewer-a", type=Path)
+    parser.add_argument("--reviewer-b", type=Path)
     parser.add_argument("--dictionary", required=True, type=Path)
+    parser.add_argument("--item-map", type=Path, help="restrict output to the 26 calibration items")
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--adjudication-output", required=True, type=Path)
+    parser.add_argument("--verify-against", type=Path, help="assert exact match to published RC5 fields")
+    parser.add_argument("--adjudication-output", type=Path)
     args = parser.parse_args()
 
     dictionary = {row["variable_id"]: row for row in read_csv(args.dictionary)}
-    index_a = paired_index(read_csv(args.reviewer_a))
-    index_b = paired_index(read_csv(args.reviewer_b))
+    if args.item_map:
+        selected = {row["variable_id"] for row in read_csv(args.item_map)}
+        dictionary = {key: value for key, value in dictionary.items() if key in selected}
+        if set(dictionary) != selected:
+            raise ValueError("item map contains variables missing from the dictionary")
+    if args.paired:
+        if args.reviewer_a or args.reviewer_b:
+            parser.error("--paired cannot be combined with reviewer sheets")
+        combined = [row for row in read_csv(args.paired) if row["variable_id"] in dictionary]
+        index_a = paired_index([
+            {"pilot_id": row["paper_id"], "pmid": row["pmid"],
+             "variable_id": row["variable_id"], "domain": dictionary[row["variable_id"]]["domain"],
+             "label": dictionary[row["variable_id"]]["label"], "value": row["coder_a_value"]}
+            for row in combined
+        ])
+        index_b = paired_index([
+            {"pilot_id": row["paper_id"], "pmid": row["pmid"],
+             "variable_id": row["variable_id"], "domain": dictionary[row["variable_id"]]["domain"],
+             "label": dictionary[row["variable_id"]]["label"], "value": row["coder_b_value"]}
+            for row in combined
+        ])
+    else:
+        if not args.reviewer_a or not args.reviewer_b:
+            parser.error("provide --paired or both --reviewer-a and --reviewer-b")
+        index_a = paired_index(read_csv(args.reviewer_a))
+        index_b = paired_index(read_csv(args.reviewer_b))
     if set(index_a) != set(index_b):
         raise ValueError("reviewer sheets do not contain identical pilot-variable keys")
 
@@ -182,6 +212,7 @@ def main() -> int:
         missing = sum(not a or not b for _, a, b in rows)
         both_na = sum(a == "NA" and b == "NA" for a, b in complete)
         applicability_disagreements = sum((a == "NA") != (b == "NA") for a, b in complete)
+        jointly_applicable = len(complete) - both_na - applicability_disagreements
         nominal_pairs = [(a, b) for a, b in complete if not (a == "NA" and b == "NA")]
         agreement = safe_ratio(sum(a == b for a, b in nominal_pairs), len(nominal_pairs))
         method = meta["reliability_method"]
@@ -231,19 +262,31 @@ def main() -> int:
                     agreement=agreement,
                     kappa=coefficient_for_target,
                     ac1=alternate,
+                    jointly_applicable=jointly_applicable,
                 ) if method not in {"exact_match", "not_applicable"} else "not_scored",
             }
         )
+
+    if args.verify_against:
+        published = {row["variable_id"]: row for row in read_csv(args.verify_against)}
+        if set(published) != {row["variable_id"] for row in results}:
+            raise AssertionError("published RC5 variable IDs differ")
+        for row in results:
+            for field in RESULT_HEADER:
+                if row[field] != published[row["variable_id"]][field]:
+                    raise AssertionError(f"{row['variable_id']} {field} differs from public RC5")
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=RESULT_HEADER)
         writer.writeheader()
         writer.writerows(results)
-    with args.adjudication_output.open("w", encoding="utf-8", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=tuple(adjudication[0]))
-        writer.writeheader()
-        writer.writerows(adjudication)
+    if args.adjudication_output:
+        args.adjudication_output.parent.mkdir(parents=True, exist_ok=True)
+        with args.adjudication_output.open("w", encoding="utf-8", newline="") as stream:
+            writer = csv.DictWriter(stream, fieldnames=tuple(adjudication[0]))
+            writer.writeheader()
+            writer.writerows(adjudication)
 
     summary = Counter(row["target_status"] for row in results)
     print(json.dumps({"variables": len(results), "target_status": summary}, ensure_ascii=False, default=dict))

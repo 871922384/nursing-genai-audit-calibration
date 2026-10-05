@@ -13,8 +13,8 @@ import random
 
 TOPIC = Path(__file__).resolve().parents[1]
 RELIABILITY = Path("data/rc5-reliability.csv")
-REVIEWER_A = Path("data/not-distributed-reviewer-a.csv")
-REVIEWER_B = Path("data/not-distributed-reviewer-b.csv")
+PAIRED_VALUES = Path("data/paired-coding-values.csv")
+BOOTSTRAP_ORDER = Path("data/bootstrap-paper-order.csv")
 DICTIONARY = Path("data/coding-dictionary.csv")
 
 
@@ -116,40 +116,40 @@ def build_interval_rows(
         dictionary_path = topic / "data/coding-dictionary.csv"
     reliability = read_csv(reliability_path)
     dictionary = {row["variable_id"]: row for row in read_csv(dictionary_path)}
-    reviewer_a_path = topic / REVIEWER_A
-    reviewer_b_path = topic / REVIEWER_B
-    if reviewer_a_path.is_file() and reviewer_b_path.is_file():
-        reviewer_a = module.paired_index(read_csv(reviewer_a_path))
-        reviewer_b = module.paired_index(read_csv(reviewer_b_path))
-    else:
-        combined = read_csv(topic / "data/paired-coding-values.csv")
-        reviewer_a = module.paired_index(
-            [
-                {
-                    "pilot_id": row["paper_id"],
-                    "variable_id": row["variable_id"],
-                    "value": row["coder_a_value"],
-                }
-                for row in combined
-            ]
-        )
-        reviewer_b = module.paired_index(
-            [
-                {
-                    "pilot_id": row["paper_id"],
-                    "variable_id": row["variable_id"],
-                    "value": row["coder_b_value"],
-                }
-                for row in combined
-            ]
-        )
+    combined = read_csv(topic / PAIRED_VALUES)
+    bootstrap_order = read_csv(topic / BOOTSTRAP_ORDER)
+    paper_order = {row["paper_id"]: int(row["bootstrap_order"]) for row in bootstrap_order}
+    if len(paper_order) != len(bootstrap_order):
+        raise ValueError("duplicate paper in bootstrap order")
+    if set(paper_order) != {row["paper_id"] for row in combined}:
+        raise ValueError("bootstrap order does not match paired-value paper IDs")
+    reviewer_a = module.paired_index(
+        [
+            {
+                "pilot_id": row["paper_id"],
+                "variable_id": row["variable_id"],
+                "value": row["coder_a_value"],
+            }
+            for row in combined
+        ]
+    )
+    reviewer_b = module.paired_index(
+        [
+            {
+                "pilot_id": row["paper_id"],
+                "variable_id": row["variable_id"],
+                "value": row["coder_b_value"],
+            }
+            for row in combined
+        ]
+    )
     if set(reviewer_a) != set(reviewer_b):
         raise ValueError("reviewer sheets do not contain identical keys")
 
     grouped: dict[str, list[tuple[str, str]]] = {}
-    for (pilot_id, variable_id), row_a in reviewer_a.items():
-        del pilot_id
-        row_b = reviewer_b[(row_a["pilot_id"], variable_id)]
+    for pilot_id, variable_id in sorted(reviewer_a, key=lambda key: (paper_order[key[0]], key[1])):
+        row_a = reviewer_a[(pilot_id, variable_id)]
+        row_b = reviewer_b[(pilot_id, variable_id)]
         grouped.setdefault(variable_id, []).append(
             (row_a["value"].strip(), row_b["value"].strip())
         )
@@ -229,7 +229,19 @@ def strict_dual_coefficient_pass_count(rows: list[dict[str, str]]) -> int:
 
 if __name__ == "__main__":
     rows = build_interval_rows()
+    published = {row["variable_id"]: row for row in read_csv(TOPIC / RELIABILITY)}
+    verified_fields = (
+        "agreement_numerator", "agreement_denominator", "agreement_ci_low",
+        "agreement_ci_high", "decision_coefficient", "decision_coefficient_value",
+        "decision_coefficient_ci_low", "decision_coefficient_ci_high",
+        "bootstrap_valid_replicates",
+    )
+    for row in rows:
+        for field in verified_fields:
+            if row[field] != published[row["variable_id"]][field]:
+                raise AssertionError(f"{row['variable_id']} {field} differs from public RC5")
     print(
         f"rows={len(rows)} strict_dual_coefficient_passes="
-        f"{strict_dual_coefficient_pass_count(rows)}"
+        f"{strict_dual_coefficient_pass_count(rows)} "
+        f"verified_bootstrap_fields={len(rows) * len(verified_fields)}"
     )

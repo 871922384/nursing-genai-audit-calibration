@@ -2,3 +2,5 @@
 __pycache__/
 *.py[cod]
 .DS_Store
+*posthoc-results.json
+reproduced-rc5.csv

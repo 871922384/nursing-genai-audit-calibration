@@ -6,7 +6,7 @@
     "Shilu Zhao",
     "Jinlong Xu"
   ],
-  "doi": null,
+  "doi": "10.5281/zenodo.23156507",
   "excluded_materials": [
     "complete texts",
     "normalized source texts",
@@ -16,14 +16,14 @@
   ],
   "files": [
     {
-      "bytes": 34,
+      "bytes": 75,
       "path": ".gitignore",
-      "sha256": "def2c071c50d7b0ecedcf706c4e8c72904f3b08833eb3f9ceef277d0bf1e4d8a"
+      "sha256": "ef3632dccfe6bb307d6c4850fe0c6de98851ded020930241ed7ce9821cd5d225"
     },
     {
-      "bytes": 884,
+      "bytes": 745,
       "path": "CITATION.cff",
-      "sha256": "d670470326a277dabf6b24b06a3789a42f44400562cf0fe9eaaf7803dffd47d8"
+      "sha256": "8d5ba62b07552a00e00d4282bb9b1bc726bfbacdfaae22a50e4ab09c269f4351"
     },
     {
       "bytes": 973,
@@ -36,19 +36,24 @@
       "sha256": "56971b9850f939baacd95c9cfc0f2628a360a062216755c09981e53b9873db1c"
     },
     {
-      "bytes": 3533,
+      "bytes": 5145,
       "path": "README.md",
-      "sha256": "f9b591a34136e5e7a31c069279ddac03d3044936128c24f6a36c77f7f82060a8"
+      "sha256": "7fae29bf5fd5ffb4b3e5f943422cbcf17ff6a518a59e3befa680011d09d38e2e"
     },
     {
-      "bytes": 1326,
+      "bytes": 1503,
       "path": "RELEASE-STATUS.md",
-      "sha256": "f7d4b5558cbb54ec354b2407ff5723d64fd119dbcbb97f81065d817a837eb29d"
+      "sha256": "f4527652b5cb51dc6c971b5cc91489a7bda8940115b1bea93c9a4d7054d041f5"
     },
     {
       "bytes": 5377,
       "path": "data/adjudicated-disagreements.csv",
       "sha256": "48a17659f64c61953672fe2eec920ca8766a5f882029b487268b8c55cf5802dd"
+    },
+    {
+      "path": "data/bootstrap-paper-order.csv",
+      "bytes": 113,
+      "sha256": "2d8044123e1dade6eed33a2d5d97fd26d0e04d74cdffcd37b64cf1bd5aa69000"
     },
     {
       "bytes": 43291,
@@ -91,19 +96,19 @@
       "sha256": "b731905b6b6bc1996f6a1c078258ad8d7ee6abf2bb45f36f6788c7889a0e5202"
     },
     {
-      "bytes": 8584,
+      "bytes": 9329,
       "path": "scripts/calibration_intervals.py",
-      "sha256": "1deff49ed5f8211166ebe923c6721abc038b976fcbaa80e1ae497f4ef7448812"
+      "sha256": "2df97577886d532bcfa14abea31af0812cce82fb54aa6f0c94496d6257731031"
     },
     {
-      "bytes": 13859,
+      "bytes": 13862,
       "path": "scripts/compute_posthoc_analyses.py",
-      "sha256": "95c7ed2d9d4db4b2c2bb168165697d19969559f701f14a89d4dbaab51beb3f18"
+      "sha256": "676ea9b226eb575e45e1123a7b08434bbe31e874b86385bbfea28bca22c21631"
     },
     {
-      "bytes": 10185,
+      "bytes": 12679,
       "path": "scripts/reliability_metrics.py",
-      "sha256": "ad2960309b32a14d2593582bf95c1330c03302003e50bd199eab0626de2402c8"
+      "sha256": "9657941e48aca8d09594431eb4df439d68f6be2bd460d9b7b0a42fcc54fa1cb2"
     }
   ],
   "license": {
@@ -111,10 +116,11 @@
     "source_code": "MIT"
   },
   "package_id": "nursing-genai-audit-calibration",
-  "package_version": "1.0.2",
+  "package_version": "1.0.3",
   "public_url": "https://github.com/871922384/nursing-genai-audit-calibration",
   "release_status": "public_immutable_versioned_release",
-  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.2",
+  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.3",
   "schema_version": 1,
-  "osf_registration_doi": "10.17605/OSF.IO/5KQD9"
+  "osf_registration_doi": "10.17605/OSF.IO/5KQD9",
+  "zenodo_record_url": "https://zenodo.org/records/23156507"
 }

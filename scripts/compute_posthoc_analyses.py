@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compute post hoc statistical analyses for RINAH transfer revision.
+"""Compute post hoc statistical analyses for the interrater calibration study.
 
 Analyses:
 - A2: Cluster bootstrap 95% CIs for pooled Stage 1 and Stage 2 agreement (by paper, 10,000 resamples)
@@ -341,7 +341,7 @@ def main():
         },
     }
 
-    out_file = REPO_ROOT / "rinah-posthoc-results.json"
+    out_file = REPO_ROOT / "posthoc-results.json"
     out_file.write_text(json.dumps(output_summary, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\nSaved summary to {out_file}")
 

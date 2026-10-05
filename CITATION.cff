@@ -1,15 +1,12 @@
 cff-version: 1.2.0
-message: "Please cite the associated manuscript when using these materials."
-title: "Why Reviewers Disagree When Auditing Reporting in Nursing Generative AI Studies: An Applicability-First Interrater Agreement Study"
+message: "Please cite this dataset and the associated manuscript when using these materials."
+title: "Interrater calibration data and analysis code for auditing reporting in nursing generative AI studies"
 type: dataset
-version: 1.0.2
+doi: 10.5281/zenodo.23156507
+version: 1.0.3
 date-released: 2026-10-05
 repository-code: "https://github.com/871922384/nursing-genai-audit-calibration"
-url: "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.2"
-identifiers:
-  - type: doi
-    value: 10.17605/OSF.IO/5KQD9
-    description: "Retrospective OSF Open-Ended Registration; not a DOI for this GitHub release"
+url: "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.3"
 authors:
   - family-names: Liang
     given-names: Lijun
