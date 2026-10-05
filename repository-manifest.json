@@ -23,7 +23,7 @@
     {
       "bytes": 884,
       "path": "CITATION.cff",
-      "sha256": "06273a57fa508bdf582888a6d5297a3506be77e7d5feeee7f078b75dd912a877"
+      "sha256": "d670470326a277dabf6b24b06a3789a42f44400562cf0fe9eaaf7803dffd47d8"
     },
     {
       "bytes": 973,
@@ -36,14 +36,14 @@
       "sha256": "56971b9850f939baacd95c9cfc0f2628a360a062216755c09981e53b9873db1c"
     },
     {
-      "bytes": 3244,
+      "bytes": 3533,
       "path": "README.md",
-      "sha256": "22244a45d41ba9925a7f5ca3f40155f2f46b5fc9ac1c05caed1f6662f672dc51"
+      "sha256": "f9b591a34136e5e7a31c069279ddac03d3044936128c24f6a36c77f7f82060a8"
     },
     {
-      "bytes": 1345,
+      "bytes": 1326,
       "path": "RELEASE-STATUS.md",
-      "sha256": "3f0bd711e9369af9c8ebab7d1173b1e3fcc96762ea8c6efc2fbbe08cbcf1d6ca"
+      "sha256": "f7d4b5558cbb54ec354b2407ff5723d64fd119dbcbb97f81065d817a837eb29d"
     },
     {
       "bytes": 5377,
@@ -111,10 +111,10 @@
     "source_code": "MIT"
   },
   "package_id": "nursing-genai-audit-calibration",
-  "package_version": "1.0.1",
+  "package_version": "1.0.2",
   "public_url": "https://github.com/871922384/nursing-genai-audit-calibration",
   "release_status": "public_immutable_versioned_release",
-  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.1",
+  "release_url": "https://github.com/871922384/nursing-genai-audit-calibration/releases/tag/v1.0.2",
   "schema_version": 1,
   "osf_registration_doi": "10.17605/OSF.IO/5KQD9"
 }
